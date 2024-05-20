@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Analysis Results</h1>
+
+        <h2>Pronunciation Similarity</h2>
+        <div class="table-responsive">
+            {{ pronunciation_similarity_html|safe }}
+        </div>
+
+        <h2>Pitch Analysis</h2>
+        <img src="data:image/png;base64,{{ pitch_graph }}" alt="Pitch Graph" class="img-fluid">
+
+        <h2>Intensity Analysis</h2>
+        <img src="data:image/png;base64,{{ intensity_graph }}" alt="Intensity Graph" class="img-fluid">
+    </div>
+</body>
+</html>
